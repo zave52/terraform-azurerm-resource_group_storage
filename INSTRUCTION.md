@@ -21,7 +21,7 @@ This Terraform module creates an Azure Resource Group and Storage Account with c
 
 ```hcl
 module "resource_group_storage" {
-  source  = "path/to/this/module"
+  source  = "app.terraform.io/zave52/resource_group_storage/azurerm"
   version = "1.0.0"
 
   resource_group_name  = "my-rg"
@@ -34,9 +34,9 @@ module "resource_group_storage" {
 
 ```hcl
 module "resource_group_storage" {
-  source  = "path/to/this/module"
+  source  = "app.terraform.io/zave52/resource_group_storage/azurerm"
   version = "1.0.0"
-  
+
   resource_group_name               = "production-rg"
   location                          = "West Europe"
   storage_account_name              = "prodstorageaccount123"
@@ -110,9 +110,9 @@ Azure Storage Account names must:
 
 ```hcl
 module "dev_storage" {
-  source  = "path/to/this/module"
+  source  = "app.terraform.io/zave52/resource_group_storage/azurerm"
   version = "1.0.0"
-  
+
   resource_group_name               = "dev-environment-rg"
   location                          = "East US"
   storage_account_name              = "devstorageaccount123"
@@ -125,9 +125,9 @@ module "dev_storage" {
 
 ```hcl
 module "prod_storage" {
-  source  = "path/to/this/module"
+  source  = "app.terraform.io/zave52/resource_group_storage/azurerm"
   version = "1.0.0"
-  
+
   resource_group_name               = "production-rg"
   location                          = "West Europe"
   storage_account_name              = "prodstorageaccount123"
@@ -140,7 +140,7 @@ module "prod_storage" {
 
 ```hcl
 module "premium_storage" {
-  source  = "path/to/this/module"
+  source  = "app.terraform.io/zave52/resource_group_storage/azurerm"
   version = "1.0.0"
 
   resource_group_name              = "premium-rg"
